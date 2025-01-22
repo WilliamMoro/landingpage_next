@@ -2,6 +2,7 @@ import Image from "next/image";
 import Logo from "/public/assets/image/Connection.png";
 import Link from "next/link";
 import StyleHeader from "./header.module.scss";
+import Button from "../button";
 
 const Header = () => {
     return (
@@ -15,7 +16,7 @@ const Header = () => {
                 <Link href="/">Cases</Link>
             </div>
             <div className={StyleHeader.action}>
-                <button className={StyleHeader.button}>Fale Conosco</button>
+                <Button title="Fale Conosco"></Button>
             </div>
         </div>
     );
