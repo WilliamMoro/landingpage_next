@@ -7,7 +7,7 @@ const Header = () => {
     return (
         <div className={StyleHeader.container}>
             <div className={StyleHeader.logo_container}>
-                <Image className={StyleHeader.logo} src={Logo}></Image>
+                <Image className={StyleHeader.logo} alt="Logotipo" src={Logo}></Image>
             </div>
             <div className={StyleHeader.menu}>
                 <Link href="/">Home</Link>
