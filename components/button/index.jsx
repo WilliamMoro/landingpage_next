@@ -4,6 +4,8 @@ const Button = ({ title, kind }) => {
     const generationClassByKind = () => {
         if(kind === "secundary") 
             return StyleButton.secundary
+        if(kind === "full") 
+            return StyleButton.full
 
         return StyleButton.primary;
     }
