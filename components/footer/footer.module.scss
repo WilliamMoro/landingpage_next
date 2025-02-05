@@ -1,0 +1,60 @@
+@import "../../styles/mixins/padding.scss";
+@import "/styles/mixins/colors.scss";
+
+.container {
+    @include Padding;
+    padding-top: 72px;
+    background-color: $purple-color2;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.logo {
+    width: 160px;
+    height: 80px;
+}
+
+
+.column {
+    margin-top: 6rem;
+
+    &.columnPrincipal {
+        margin-top: 0;
+    }
+
+    .title {
+        font-size: 30px;
+        color: $text-white;
+    }
+
+    h1 {
+        font-size: 24px;
+        color: $green2-color;
+        grid-row-start: 2;
+    }
+
+    p {
+        font-size: 22px;
+    }
+
+    &.alignRight {
+        text-align: right;
+    }
+
+    .icons {
+        display: inline-grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 25px;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+
+.allRightReserverd {
+    padding: 3rem 0 1rem;
+    font-size: 20px;
+    color: $gray-color;
+    grid-column: span 4;
+    text-align: center;
+}
