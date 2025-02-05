@@ -2,9 +2,9 @@
 
 .container {
     @include Padding;
-    background-image: url("../../public/assets/image/fundo.svg");
     height: 100vh;
     padding-top: 219px;
+    background-image: url("../../public/assets/image/fundo.svg");
     background-repeat: no-repeat;
     background-size: cover;
     display: grid;

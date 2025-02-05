@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Button from "../button";
 import Input from "../input";
 import Select from "../select";
@@ -38,6 +39,14 @@ const Contato = ()  => {
 
                 <Button title="Enviar" kind="full"></Button>
             </form>
+        </div>
+        <div className={StyleContato.footer}>
+            <p>
+                Ao enviar esse formulário, você reconhece que leu e concorda com a nossa 
+                <Link href="/">
+                    <span> Política de Privacidade.</span>
+                </Link>
+            </p>
         </div>
     </div>
     );
