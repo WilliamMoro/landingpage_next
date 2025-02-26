@@ -1,60 +1,79 @@
 @import "../../styles/mixins/padding.scss";
 @import "/styles/mixins/colors.scss";
+@import "/styles/mixins/responsive.scss";
+@import "/styles/mixins/fonts.scss";
 
 .container {
     @include Padding;
     padding-top: 72px;
-    background-color: $purple-color2;
+    background-color:  $purple-color2;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-}
+  
+    @include Phone {
+      grid-template-columns: 1fr;
+      padding-top: 1rem;
+      gap: 1rem;
+      padding-bottom: 1rem;
+    }
+  }
 
-.logo {
-    width: 160px;
-    height: 80px;
-}
-
-
-.column {
-    margin-top: 6rem;
-
+  .logo {
+      width: 160px;
+      height: 80px;
+    }   
+  
+  .column {
+    margin-top: 4.5rem;
+  
     &.columnPrincipal {
-        margin-top: 0;
+      margin-top: 0px;
     }
-
+  
     .title {
-        font-size: 30px;
-        color: $text-white;
+      @include SizeNormal;
+      color: $text-white;
     }
-
+  
     h1 {
-        font-size: 24px;
-        color: $green2-color;
-        grid-row-start: 2;
+      @include SizeSmall;
+      color: $green2-color;
     }
-
+  
     p {
-        font-size: 22px;
+      @include SizeSmall;
     }
-
+  
     &.alignRight {
-        text-align: right;
+      text-align: right;
     }
-
+  
     .icons {
-        display: inline-grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 25px;
-        align-items: center;
-        justify-content: center;
+      display: inline-grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      align-items: center;
+      justify-content: center;
     }
-}
-
-
-.allRightReserverd {
-    padding: 3rem 0 1rem;
-    font-size: 20px;
+  
+    @include Phone {
+      margin-top: 0px;
+  
+      &.alignRight {
+        text-align: left;
+      }
+    }
+  }
+  
+  .allRightReserved {
+    @include SizeSmall;
+    padding: 6rem 0 1rem;
     color: $gray-color;
     grid-column: span 4;
     text-align: center;
-}
+  
+    @include Phone {
+      grid-column: 1;
+      padding-bottom: 1rem;
+    }
+  }
